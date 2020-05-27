@@ -15,6 +15,12 @@ namespace BasketballStatSheet
         public WelcomePage()
         {
             InitializeComponent();
+
+        }
+
+        async void createTeamButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CreateTeamPage());
         }
     }
 }

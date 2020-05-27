@@ -6,8 +6,32 @@
              mc:Ignorable="d"
              x:Class="BasketballStatSheet.CreateTeamPage">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-           Hello
-        
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Create Your Team"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   FontAttributes="Bold"
+                   FontSize="40"/>
+
+            <Entry Placeholder="Team Name" 
+                   PlaceholderColor="LightSlateGray"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   ClearButtonVisibility="WhileEditing"/>
+            
+            <!-- TODO: MAKE NESTED GRID -->
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

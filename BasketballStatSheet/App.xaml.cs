@@ -10,7 +10,11 @@ namespace BasketballStatSheet
         {
             InitializeComponent();
 
-            MainPage = new WelcomePage();
+            MainPage = new NavigationPage(new WelcomePage())
+            {
+                BarBackgroundColor = Color.Transparent,
+            };
+
         }
 
         protected override void OnStart()

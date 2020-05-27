@@ -4,14 +4,32 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="BasketballStatSheet.WelcomePage">
+             x:Class="BasketballStatSheet.WelcomePage"
+             Title="Stat Sheet App">
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height=".5*"/>
+            </Grid.RowDefinitions>
+
             <Label Text="Welcome to Simple Stat Tracker!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
                 FontAttributes="Bold"
-                FontSize="Large"/>
-        </StackLayout>
+                FontSize="40"
+                Grid.Row="0"
+                HorizontalTextAlignment="Center"/>
+
+            <Button Text="Create A Team"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    BorderWidth="10"
+                    BackgroundColor="SlateGray"
+                    TextColor="White"
+                    Clicked="createTeamButtonClicked"
+                    Grid.Row="1"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
